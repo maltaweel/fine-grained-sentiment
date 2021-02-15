@@ -1,0 +1,53 @@
+2021-01-31 22:33:26,784 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:33:26,784 Model: "TextClassifier(
+  (document_embeddings): DocumentRNNEmbeddings(
+    (embeddings): StackedEmbeddings(
+      (list_embedding_0): WordEmbeddings('glove')
+      (list_embedding_1): FlairEmbeddings(
+        (lm): LanguageModel(
+          (drop): Dropout(p=0.05, inplace=False)
+          (encoder): Embedding(300, 100)
+          (rnn): LSTM(100, 2048)
+          (decoder): Linear(in_features=2048, out_features=300, bias=True)
+        )
+      )
+      (list_embedding_2): FlairEmbeddings(
+        (lm): LanguageModel(
+          (drop): Dropout(p=0.05, inplace=False)
+          (encoder): Embedding(300, 100)
+          (rnn): LSTM(100, 2048)
+          (decoder): Linear(in_features=2048, out_features=300, bias=True)
+        )
+      )
+    )
+    (word_reprojection_map): Linear(in_features=4196, out_features=256, bias=True)
+    (rnn): GRU(256, 512, batch_first=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+  )
+  (decoder): Linear(in_features=512, out_features=5, bias=True)
+  (loss_function): CrossEntropyLoss()
+  (beta): 1.0
+  (weights): None
+  (weight_tensor) None
+)"
+2021-01-31 22:33:26,784 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:33:26,785 Corpus: "Corpus: 1204 train + 1204 dev + 2210 test sentences"
+2021-01-31 22:33:26,785 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:33:26,785 Parameters:
+2021-01-31 22:33:26,785  - learning_rate: "0.1"
+2021-01-31 22:33:26,785  - mini_batch_size: "32"
+2021-01-31 22:33:26,785  - patience: "3"
+2021-01-31 22:33:26,785  - anneal_factor: "0.5"
+2021-01-31 22:33:26,785  - max_epochs: "150"
+2021-01-31 22:33:26,785  - shuffle: "True"
+2021-01-31 22:33:26,785  - train_with_dev: "False"
+2021-01-31 22:33:26,785  - batch_growth_annealing: "False"
+2021-01-31 22:33:26,785 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:33:26,785 Model training base path: "../models/flair"
+2021-01-31 22:33:26,785 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:33:26,786 Device: cpu
+2021-01-31 22:33:26,786 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:33:26,786 Embeddings storage mode: cpu
+2021-01-31 22:33:26,787 ----------------------------------------------------------------------------------------------------
+2021-01-31 22:34:13,681 epoch 1 - iter 3/38 - loss 1.59213336 - samples/sec: 2.06 - lr: 0.100000
+2021-01-31 22:36:30,048 epoch 1 - iter 6/38 - loss 1.59781607 - samples/sec: 0.70 - lr: 0.100000
